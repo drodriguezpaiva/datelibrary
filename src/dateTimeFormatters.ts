@@ -1,44 +1,65 @@
 import moment from 'moment';
+import { enUS, formatDateUS, formatDateES, formatDatetimeUS, formatDatetimeES } from './constants';
+
+/**
+ * getLocalDatetime : Get the ISO 8601 date and time
+ * convert depending on lang
+ *
+ * @param  {*} `date`
+ * @param  {string} `lang`
+ * @return {string}
+ */
+
+export const getLocalDatetime = (date: any, lang: string = enUS) => {
+  let localDatetime = '';
+
+  if (lang === enUS) {
+    localDatetime = moment.utc(date).local().format(formatDatetimeUS);
+  } else {
+    localDatetime = moment.utc(date).local().format(formatDatetimeES);
+  }
+
+  return localDatetime;
+};
+
 
 /**
  * getLocalDate : Get the ISO 8601 date
  * convert depending on lang
  *
- * @param  {Object} `date`
+ * @param  {*} `date`
  * @param  {string} `lang`
  * @return {string}
  */
 
-export const getLocalDate = (date, lang: string) => {
-  let localTime = '';
+export const getLocalDate = (date: any, lang: string = enUS) => {
+  let localDate = '';
 
-  if (lang === 'ESes') {
-    localTime = moment.utc(date).local().format('MM/DD/YYYY HH:mm A');
+  if (lang === enUS) {
+    localDate = moment.utc(date).local().format(formatDateUS);
   } else {
-    localTime = moment.utc(date).local().format('DD/MM/YYYY HH:mm A');
+    localDate = moment.utc(date).local().format(formatDateES);
   }
 
-  return localTime;
+  return localDate;
 };
-//console.log(getLocalDate('2021-01-14T13:03:33Z', 'ESes'));
 
 /**
- * getFormatDate : Get the string date
+ * getFormattedDate : Get the string date
  * convert depending on lang
  *
- * @param  {Object} `date`
+ * @param  {*} `date`
  * @param  {string} `lang`
  * @return {string}
  */
+export const getFormattedDate = (date: any, lang: string = enUS) => {
+  let formattedDate = '';
 
-export const getFormatDate = (date, lang: string) => {
-  let localTime: any = '';
-
-  if (lang === 'ESes') {
-    localTime = moment('2020-10-10', 'YYYY-MM-DD');
+  if (lang === enUS) {
+    formattedDate = moment(date).format(formatDateUS);
   } else {
-    localTime = moment('2020-10-10', 'YYYY-MM-DD');
+    formattedDate = moment(date).format(formatDateES);
   }
 
-  return localTime;
+  return formattedDate;
 };

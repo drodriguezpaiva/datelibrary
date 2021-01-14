@@ -1,4 +1,5 @@
     export {
+    getLocalDatetime,
     getLocalDate,
-    getFormatDate
+    getFormattedDate
 } from './dateTimeFormatters';  

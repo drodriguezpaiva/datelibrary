@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EclipseTechnology/DateLibrary.git"
+    "url": "git+https://github.com/drodriguezpaiva/datelibrary"
   },
   "keywords": [
     "date",
@@ -21,9 +21,9 @@
   "author": "Eclipse Technology, LLC.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EclipseTechnology/DateLibrary/issues"
+    "url": "https://github.com/drodriguezpaiva/datelibrary/issues"
   },
-  "homepage": "https://github.com/EclipseTechnology/DateLibrary#readme",
+  "homepage": "https://github.com/drodriguezpaiva/datelibrary#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/EclipseTechnology"
   },
