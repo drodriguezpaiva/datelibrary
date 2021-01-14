@@ -2,7 +2,7 @@
   "name": "@drodriguezpaiva/datelibrary",
   "version": "1.0.0",
   "description": "Library for date string operations in Equinox Platform",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "npm run build && npm run test",
     "build": "tsc --project tsconfig.cjs.json",
