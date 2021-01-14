@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "sourceMap": false,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin"
+      }
+    ]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
